@@ -1,4 +1,5 @@
 ﻿# Spring-boot-project
 
-Expolring the Backend by spring boot
+Exploring the Backend by spring boot
+
 
