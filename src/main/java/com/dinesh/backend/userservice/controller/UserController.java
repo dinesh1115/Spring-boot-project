@@ -4,6 +4,8 @@ import com.dinesh.backend.userservice.dto.CreateUserRequest;
 import com.dinesh.backend.userservice.Service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/users")
@@ -17,7 +19,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<String> createUser(
-            @RequestBody CreateUserRequest request
+            @Valid @RequestBody CreateUserRequest request
     ) {
         String response = userService.createUser(request);
         return ResponseEntity.ok(response);
